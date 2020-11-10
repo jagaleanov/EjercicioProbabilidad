@@ -27,7 +27,7 @@
         </nav>
         <div class="card mx-4">
             <div class="row">
-                <div class="col-9">
+                <div class="col-8">
                     <div class="card-body">
                         <h5 class="card-title">Enunciado</h5>
                         <small>Autor desconocido</small>
@@ -52,19 +52,21 @@
                         </p>
 
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-12">
+                                <!--
                                 <p>
                                     <a class="btn badge badge-secondary rounded-pill px-2 py-1"
-                                        style="border:solid 1px #000;" data-toggle="collapse" href="#collapseE"
-                                        role="button" aria-expanded="false" aria-controls="collapseE">
+                                        style="border:solid 1px #000;" data-toggle="collapse" href="#collapseS"
+                                        role="button" aria-expanded="false" aria-controls="collapseS">
                                         S
                                     </a>
                                 </p>
-                                <div class="collapse" id="collapseE">
+                                <div class="collapse" id="collapseS">
                                     <div class="card card-body">
-                                        Conjunto de todos los eventos. (Espacio muestral)
+                                        Espacio muestral.
                                     </div>
                                 </div>
+                                -->
                                 <p>
                                     <a class="btn badge badge-primary rounded-pill px-2 py-1"
                                         style="border:solid 1px #000;" data-toggle="collapse" href="#collapseE"
@@ -118,7 +120,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-9">
+                            <!--
+                            <div class="col-6">
                                 <p>
                                     <a class="btn badge rounded-pill px-2 py-1"
                                         style="border:solid 1px #000;background:#AE00FF;color:#FFF"
@@ -181,14 +184,14 @@
                                         detectar señales.
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <div class="card-body">
                         <h5 class="card-title">Valores iniciales</h5>
-                        Ingrese valores entre 0 y 1 con hasta 2 decimales para:
+                        Ingrese valores entre 0 y 1 con hasta 2 decimales para las siguientes probabilidades:
                         <div class="form-group">
                             <label for="valueE" class="col-form-label">
                                 P(E)
@@ -209,7 +212,7 @@
                             <input type="number" class="form-control" id="valueR_EP" min="0" max="1" step="0.01"
                                 required>
                         </div>
-                        <input type="button" class="btn btn-primary" id="calculate" value="Calcular"
+                        <input type="button" class="btn btn-primary" id="calculate" value="Resolver"
                             onclick="setValues()">
                     </div>
                 </div>
@@ -230,20 +233,22 @@
             <div class="col-7">
                 <div class="card-body">
                     <p>
-                        Ya que E y E' son eventos colectivamente exhaustivos y tambien son eventos mutuamente
-                        excluyentes
-                        entonces cada uno es una partición del espacio muestral S.
+                        Ya que E y E' son eventos colectivamente exhaustivos y mutuamente excluyentes entonces cada uno
+                        es una partición del espacio muestral S.
                     </p>
                     <p>
-                        Además R es un subconjunto de S compuesto por <img src="img/composicion.png">
-                    </p>
+                        Además R es un subconjunto de S compuesto de la siguiente manera <img src="img/composicion.png">
+                        por lo que </p>
+                    <img src="img/composicion2.png" class="mb-4">
+
                     <h5 class="card-title">Teorema de Bayes</h5>
                     <img src="img/bayes.png" class="mb-2">
                     <p>
-                        La probabilidad de que si se detectan señales estas provengan de Kepler-452b es <strong
-                            id='res'>0</strong> equivalente al <strong id='resP'>0</strong> de R
+                        La probabilidad de que si se detecten señales provenientes de Kepler-452b es <strong
+                            id='res'>0</strong> o <strong id='resP'>0</strong>
                     </p>
-                    <small>Basado en Wackerly, Mendenhall, Scheaffer. (2010). Estadística matemática con aplicaciones,
+                    <small>Basado en un ejemplo de Wackerly, Mendenhall, Scheaffer. (2010). Estadística matemática con
+                        aplicaciones,
                         septima edición. Cengage learning, México. p. 69 - 70. </small>
                 </div>
             </div>
